@@ -20,7 +20,7 @@ router.get('/:id', async (req, res) => {
   res.json(data);
 });
 
-// PUT
+// POST
 router.put('/:id', async (req, res) => {
   const { nombres, apellidos, email } = req.body;
   const { data, error } = await supabase
