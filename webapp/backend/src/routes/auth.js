@@ -3,7 +3,7 @@ const router = express.Router();
 const supabase = require('../supabaseClient');
 
 // POST reg
-router.post('/register', async (req, res) => {
+router.post('/registrar', async (req, res) => {
   const { id, nombres, apellidos, email, password } = req.body;
   const { data, error } = await supabase
     .from('estudiante')

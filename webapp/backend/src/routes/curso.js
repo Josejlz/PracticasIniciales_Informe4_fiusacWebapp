@@ -9,6 +9,17 @@ router.get('/', async (req, res) => {
   res.json(data);
 });
 
+// POST curso
+
+router.post('/registrar', async (req, res) => {
+  const { id, nombre} = req.body;
+  const { data, error } = await supabase
+    .from('curso')
+    .insert([{ id, nombre}]);
+  if (error) return res.status(400).json({ error: error.message });
+  res.json({ message: 'Curso registrado', data });
+});
+
 // GET estudiante_curso
 router.get('/:id/estudiantes', async (req, res) => {
   const { data, error } = await supabase
@@ -19,8 +30,8 @@ router.get('/:id/estudiantes', async (req, res) => {
   res.json(data);
 });
 
-// POST
-router.post('/enroll', async (req, res) => {
+// POST estudiante_curso
+router.post('/inscripcion', async (req, res) => {
   const { estudianteId, cursoId } = req.body;
   const { data, error } = await supabase
     .from('estudiante_curso')

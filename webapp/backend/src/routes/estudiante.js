@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
   res.json(data);
 });
 
-// GET id
+// GET from id
 router.get('/:id', async (req, res) => {
   const { data, error } = await supabase
     .from('estudiante')
@@ -18,17 +18,6 @@ router.get('/:id', async (req, res) => {
     .single();
   if (error) return res.status(404).json({ error: 'Estudiante no encontrado' });
   res.json(data);
-});
-
-// POST
-router.put('/:id', async (req, res) => {
-  const { nombres, apellidos, email } = req.body;
-  const { data, error } = await supabase
-    .from('estudiante')
-    .update({ nombres, apellidos, email })
-    .eq('id', req.params.id);
-  if (error) return res.status(400).json({ error: error.message });
-  res.json({ message: 'Estudiante actualizado', data });
 });
 
 // DELETE
