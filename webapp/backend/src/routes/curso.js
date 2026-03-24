@@ -9,6 +9,20 @@ router.get('/', async (req, res) => {
   res.json(data);
 });
 
+//Get curso ID
+
+router.get('/cursos/:id', async (req, res) => {
+  const {data, error} = await supabase
+  .from('curso')
+  .select('*')
+  .eq('id', req.params.id)
+  .single();
+  if (error) return res.status(400).json({ error: error.message });
+  res.json(data);
+}
+
+);
+
 // POST curso
 
 router.post('/registrar', async (req, res) => {
@@ -20,7 +34,7 @@ router.post('/registrar', async (req, res) => {
   res.json({ message: 'Curso registrado', data });
 });
 
-// GET estudiante_curso
+// GET estudiante_curso con cursoId
 router.get('/:id/estudiantes', async (req, res) => {
   const { data, error } = await supabase
     .from('estudiante_curso')

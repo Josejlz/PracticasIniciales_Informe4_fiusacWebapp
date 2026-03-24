@@ -1,0 +1,45 @@
+.register-body{
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.5)), url(../../media/usacLogo.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 1em;
+  padding: 0.5em;
+}
+
+.container input {
+  padding: 10px;
+  margin: 8px 0;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.container button {
+  padding: 10px;
+  width: 300px;
+  background-color: #29bc7a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display:block;
+  margin: 0 auto;
+}
+
+.container{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

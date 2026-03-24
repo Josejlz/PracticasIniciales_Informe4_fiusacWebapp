@@ -1,0 +1,59 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+    height: 60px;
+    background-color: #1e1e2e;
+    color: white;
+    top: 0;
+}
+
+.navbar-brand a {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 24px;
+}
+
+.navbar-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.navbar-links a:hover {
+    color: white;
+}
+
+.navbar-user {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.navbar-user span {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.navbar-user button {
+    padding: 6px 14px;
+    background: transparent;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+}
+
+.navbar-user button:hover {
+    background: #333;
+}

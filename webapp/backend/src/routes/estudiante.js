@@ -20,7 +20,7 @@ router.get('/:id', async (req, res) => {
   res.json(data);
 });
 
-// DELETE
+// DELETE estudiante
 router.delete('/:id', async (req, res) => {
   const { error } = await supabase
     .from('estudiante')
