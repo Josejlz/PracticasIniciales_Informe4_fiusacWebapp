@@ -1,3 +1,4 @@
+/* pagina */
 .feed-page {
   min-height: 100vh;
   background-color: #f4f4f8;
@@ -7,4 +8,97 @@
   max-width: 600px;
   margin: 0 auto;
   padding: 2em 0;
+}
+
+
+
+.feed-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2em 1em;
+}
+
+/* Card */
+.post-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* Header de la card*/
+.post-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.post-header small {
+  color: #777;
+}
+
+/* contenido */
+.post-contenido {
+  margin: 0.8rem 0;
+  line-height: 1.4;
+}
+
+/* footer de la card */
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* boton */
+.comment-btn {
+  border: none;
+  background: #007bff;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s ease;
+}
+
+.comment-btn:hover {
+  background: #0056b3;
+}
+
+/* Comentarios */
+.comentarios-section {
+  margin-top: 12px;
+  padding: 10px;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+/* animacion */
+.comentarios-section {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* para ocultar comentarios */
+.hidden {
+  display: none;
 }

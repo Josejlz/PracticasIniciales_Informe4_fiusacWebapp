@@ -11,12 +11,12 @@ export function AuthProvider({ children }) {
 
   const login = (studentData) => {
     setStudent(studentData);
-    localStorage.setItem('student', JSON.stringify(studentData)); // persist it
+    localStorage.setItem('student', JSON.stringify(studentData)); // persistencia de login
   };
 
   const logout = () => {
     setStudent(null);
-    localStorage.removeItem('student'); // clear it
+    localStorage.removeItem('student'); // borrado de login
   };
 
   return (

@@ -38,7 +38,7 @@ CREATE TABLE catedratico_curso (
 CREATE TYPE post_tipo AS ENUM ('curso', 'catedratico');
  
 CREATE TABLE post (
-    id              INT  NOT NULL PRIMARY KEY,
+    id              INT  NOT NULL PRIMARY KEY SERIAL,
     "estudianteId"  INT  NOT NULL,
     "cursoId"       INT,
     tipo            post_tipo,

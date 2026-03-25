@@ -5,7 +5,7 @@ function ProtectedRoute({ children }) {
   const { student } = useAuth();
 
   if (!student) {
-    return <Navigate to="/" replace />; // redirect to login if not logged in
+    return <Navigate to="/" replace />; // manda al login
   }
 
   return children;
