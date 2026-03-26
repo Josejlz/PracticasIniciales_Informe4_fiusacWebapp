@@ -57,3 +57,79 @@
 .navbar-user button:hover {
     background: #333;
 }
+
+/*Para el searchbar*/
+
+.navbar-search {
+    position: relative;
+    flex: 1;
+    max-width: 280px;
+    margin: 0 1rem;
+}
+
+.navbar-search input {
+    width: 100%;
+    padding: 7px 14px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-family: inherit;
+    background: #f4f4f8;
+    color: #333;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.navbar-search input:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    background: white;
+}
+
+/* ── Dropdown del searchbar ── */
+.search-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    overflow: hidden;
+    animation: fadeIn 0.15s ease;
+}
+
+.search-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.search-result:hover {
+    background: #f4f4f8;
+}
+
+.search-result-name {
+    font-size: 0.88rem;
+    color: #1a1a2e;
+    font-weight: 500;
+}
+
+.search-result small {
+    color: #aaa;
+    font-size: 0.78rem;
+}
+
+.search-no-results {
+    padding: 0.75rem 1rem;
+    margin: 0;
+    color: #aaa;
+    font-size: 0.85rem;
+    text-align: center;
+}

@@ -1,16 +1,9 @@
-/* pagina */
+/* ── Para la pagina ── */
 .feed-page {
   min-height: 100vh;
-  background-color: #f4f4f8;
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', sans-serif;
 }
-
-.feed-content {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2em 0;
-}
-
-
 
 .feed-content {
   max-width: 600px;
@@ -18,75 +11,191 @@
   padding: 2em 1em;
 }
 
-/* Card */
+/* ── Header principal ── */
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* ── Card del post ── */
 .post-card {
   background: white;
-  border-radius: 12px;
-  padding: 1rem;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .post-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
-/* Header de la card*/
+/* ── Header del post ── */
+.post-header {
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 0.75rem;
+}
+
 .post-header h3 {
-  margin: 0;
+  margin: 0 0 0.25rem 0;
   font-size: 1.1rem;
+  color: #1a1a2e;
 }
 
 .post-header small {
-  color: #777;
+  display: block;
+  color: #888;
+  font-size: 0.8rem;
+  margin-top: 2px;
 }
 
-/* contenido */
+/* ── Boton de post nuevo ── */
+
+.newpost-btn{
+  border: none;
+  background: #3ac0c0;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.newpost-btn:hover {
+  background: #35c4cc;
+  transform: scale(1.03);
+}
+
+/* ── Contenido del post ── */
 .post-contenido {
-  margin: 0.8rem 0;
-  line-height: 1.4;
+  margin: 0.75rem 0;
+  line-height: 1.6;
+  color: #333;
+  font-size: 0.95rem;
 }
 
-/* footer de la card */
+/* ── Footer de post ── */
 .post-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #f0f0f0;
 }
 
-/* boton */
+.post-footer small {
+  color: #aaa;
+  font-size: 0.8rem;
+}
+
+/* ── boton de comentarios ── */
 .comment-btn {
   border: none;
-  background: #007bff;
+  background: #4f46e5;
   color: white;
-  padding: 6px 12px;
+  padding: 6px 16px;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 0.85rem;
-  transition: background 0.2s ease;
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.1s ease;
 }
 
 .comment-btn:hover {
-  background: #0056b3;
+  background: #4338ca;
+  transform: scale(1.03);
 }
 
-/* Comentarios */
+/* ── Seccion de comentarios ── */
 .comentarios-section {
-  margin-top: 12px;
-  padding: 10px;
-  background: #f9fafb;
-  border-radius: 8px;
-  border: 1px solid #eee;
-}
-
-/* animacion */
-.comentarios-section {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: #f8f9fb;
+  border-radius: 10px;
+  border: 1px solid #ebebeb;
   animation: fadeIn 0.2s ease-in-out;
 }
 
+.comentario-card {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #efefef;
+}
+
+.comentario-card:last-of-type {
+  border-bottom: none;
+}
+
+.comentario-card p {
+  margin: 0 0 0.2rem 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.comentario-card small {
+  color: #aaa;
+  font-size: 0.78rem;
+}
+
+/* ── Caja de comentarios ── */
+.comment-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #ebebeb;
+}
+
+.comment-box textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-family: inherit;
+  resize: none;
+  min-height: 70px;
+  background: white;
+  color: #333;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.comment-box textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.comment-box button {
+  align-self: flex-end;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  padding: 6px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.comment-box button:hover {
+  background: #4338ca;
+  transform: scale(1.03);
+}
+
+/* ── Animacion ── */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -98,7 +207,43 @@
   }
 }
 
-/* para ocultar comentarios */
-.hidden {
-  display: none;
+/* ── Para el titulo ── */
+.feed-content h2 {
+  font-size: 1.4rem;
+  color: #1a1a2e;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #4f46e5;
+  display: inline-block;
+}
+
+
+/* ── Feed Filters ── */
+.feed-filtros {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.filtro-btn {
+    border: 2px solid #ddd;
+    background: white;
+    color: #888;
+    padding: 5px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.filtro-btn:hover {
+    border-color: #4f46e5;
+    color: #4f46e5;
+}
+
+.filtro-btn.active {
+    border-color: #4f46e5;
+    background: #4f46e5;
+    color: white;
 }

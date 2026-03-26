@@ -47,4 +47,25 @@ router.get('/postsFiltered', async (req, res) => {
     res.json(data);
 });
 
+router.get('/postsComments', async (req, res) => {
+    const { data, error } = await supabase
+        .from('post')
+        .select(`
+            *,
+            curso (nombre),
+            catedratico (nombres, apellidos),
+            estudiante (nombres, apellidos),
+            comentario (
+                id,
+                contenido,
+                fecha,
+                estudiante (nombres, apellidos)
+            )
+        `)
+        .order('fecha', { ascending: false });
+
+    if (error) return res.status(400).json({ error: error.message });
+    res.json(data);
+});
+
 module.exports = router;

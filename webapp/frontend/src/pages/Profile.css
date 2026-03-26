@@ -1,0 +1,162 @@
+/* ── Page ── */
+.profile-page {
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.profile-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2em 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.profile-loading {
+    text-align: center;
+    margin-top: 3rem;
+    color: #888;
+}
+
+/* ── Profile Card ── */
+.profile-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.profile-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #4f46e5;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.profile-info h2 {
+    margin: 0 0 0.2rem 0;
+    font-size: 1.2rem;
+    color: #1a1a2e;
+}
+
+.profile-info p {
+    margin: 0 0 0.2rem 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.profile-info small {
+    color: #aaa;
+    font-size: 0.8rem;
+}
+
+/* ── Sections ── */
+.profile-section {
+    background: white;
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.profile-section h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    color: #1a1a2e;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #4f46e5;
+    display: inline-block;
+}
+
+/* ── Course List ── */
+.curso-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.curso-item {
+    padding: 0.5rem 0.75rem;
+    background: #f4f4f8;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #333;
+    border-left: 3px solid #4f46e5;
+}
+
+/* ── Add Course Box ── */
+.add-curso-box {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.add-curso-box select {
+    flex: 1;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 0.88rem;
+    font-family: inherit;
+    color: #333;
+    background: white;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-curso-box select:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.add-curso-box button {
+    border: none;
+    background: #4f46e5;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background 0.2s ease, transform 0.1s ease;
+    white-space: nowrap;
+}
+
+.add-curso-box button:hover {
+    background: #4338ca;
+    transform: scale(1.03);
+}
+
+/* ── Messages ── */
+.profile-error {
+    color: #e53e3e;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile-success {
+    color: #38a169;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile-empty {
+    color: #aaa;
+    font-size: 0.88rem;
+    font-style: italic;
+}

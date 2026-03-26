@@ -46,3 +46,177 @@
 .login-container {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
+/* ── Modal Overlay ── */
+.modal-overlay {
+    position: fixed;
+    inset: 0;                          /* top/right/bottom/left all 0 */
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.15s ease;
+}
+
+/* ── Modal Box ── */
+.modal {
+    background: white;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 480px;
+    margin: 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    animation: slideUp 0.2s ease;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #1a1a2e;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #aaa;
+    transition: color 0.2s;
+}
+
+.modal-close:hover {
+    color: #333;
+}
+
+/* ── Modal Body ── */
+.modal-body {
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.modal-body label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: -0.2rem;
+}
+
+.modal-body input,
+.modal-body select,
+.modal-body textarea {
+    width: 100%;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 0.88rem;
+    font-family: inherit;
+    color: #333;
+    background: white;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.modal-body input:focus,
+.modal-body select:focus,
+.modal-body textarea:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.modal-body textarea {
+    min-height: 100px;
+    resize: none;
+}
+
+/* ── Tipo Toggle ── */
+.tipo-toggle {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tipo-toggle button {
+    flex: 1;
+    padding: 7px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: white;
+    color: #888;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tipo-toggle button.active {
+    border-color: #4f46e5;
+    background: #f0efff;
+    color: #4f46e5;
+}
+
+/* ── Modal Footer ── */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.modal-cancel {
+    background: none;
+    border: 1px solid #ddd;
+    color: #666;
+    padding: 7px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+}
+
+.modal-cancel:hover {
+    background: #f4f4f8;
+}
+
+.modal-submit {
+    background: #4f46e5;
+    border: none;
+    color: white;
+    padding: 7px 22px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.modal-submit:hover {
+    background: #4338ca;
+    transform: scale(1.03);
+}
+
+/* ── Modal Error ── */
+.modal-error {
+    color: #e53e3e;
+    font-size: 0.85rem;
+    margin: 0 1.5rem;
+}
